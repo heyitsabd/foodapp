@@ -1,0 +1,589 @@
+.body{
+width: 100%;
+height: 33cm;
+}
+.black{
+  position: relative;
+  background-color: #474747;
+  width: 100%;
+  height: 1.5cm;
+  top: 0px;
+}
+.yellow_button{
+  display: block;
+  position: relative;
+  background-color: transparent;
+  border: 1px solid #EBDA00;
+  border-radius: 5px;
+  color: #EBDA00;
+  top: 9px;
+  left: 7px;
+  width: 2cm;
+  height: 1cm;
+  align-content: center;
+}
+
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  max-width: 100%;
+}
+
+
+.search_engine{
+  display: flex;
+  margin: 300px 0 30px 0;  
+}
+.search_engine > input{
+
+  width: 500px;
+  height: 40px;
+  border: white;
+  padding-left: 20px;
+  margin-top: -250px;
+  margin-left: 300px;
+  border-radius: 3px 0 0 3px;
+ 
+}
+.search_engine > button{
+  background-color: #474747;
+  color: #c7bb0f;
+  width: 200px;
+  height: 42px;
+  border:  solid#EBDA00;
+  margin-top: -250px;
+  margin-left: auto;
+  margin-right: 300px;
+  border-radius: 0 3px 3px 0;
+}
+.out{
+  display: block;
+}
+.card{
+  display: flex;
+  margin-top: -150px;
+}
+.arrow_styling{
+  height: 40px;
+  width: 40px;
+  border:none;
+  border-radius: 30cm 30cm 30cm 30cm;
+  margin-top: 170px ;
+
+}
+.image{
+  width: 200px;
+  height: 200px;
+  margin-top: 100px;
+}
+.label{
+  text-align: center;
+  margin-top: -60px;
+  padding-bottom: 50px ;
+  color: #EBDA00;
+  font-size: 25px;
+  font-family: monospace;
+}
+.out1{
+  margin-top: -150px;
+  padding-bottom: 180px;
+}
+
+.design{
+  display: block;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.design2{
+  display: block;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.The_Royal_Menu{
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color:#F2E576;
+}
+.design3{
+  display: block;
+  position: relative;
+  width: 300px;
+  top: -25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.design4{
+  display: block;
+  position: relative;
+  width: 300px;
+  top: -65px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.experience_the_royalty{
+  position: relative;
+  font-size: 30px;
+  top: -47px;
+  text-align: center;
+  color: #c7bb0f;
+}
+.para1{
+  position: relative;
+  text-align:center;
+  color: white;
+  
+}
+.para2{
+  position: relative;
+  text-align: center;
+  color: black;
+  font-size: 35px;
+  top: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.para3{
+  position: relative;
+  text-align: center;
+  color: #BBBBBB;
+  font-size: 13px;
+}
+.safety{
+  position: relative;
+  left: -0.5cm;
+}
+.para{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  left: 150px;
+  width: 300px;
+  margin-top: 30px;
+  font-size: 15px;
+}
+.vedio{
+  display: block;
+  position: relative;
+  float: right;
+  margin-top: -240px;
+  margin-right: 60px;
+}
+.peach_background{
+  position: relative;
+  margin-top: 80px;
+  height: 12cm;
+  width: 100%;
+  background-color: #FAEBCB;
+}
+.bluebox{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  background-color: #4945BE;
+  height: 150px;
+  top: 60px;
+}
+.bluebox::before{
+  display: flex;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 15px solid #FAEBCB;
+  border-right: 15px solid #4945BE;
+  border-bottom:15px solid #FAEBCB;
+  height:120px;
+  width: 0px;
+}
+.bluebox::after{
+  content:'';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top: 15px solid #FAEBCB;
+  border-left: 15px solid #4945BE;
+  border-bottom: 15px solid #FAEBCB;
+  height: 120px;
+  width: 0px;
+}
+
+
+.eatsure{
+   display: flex;
+   position: relative;
+   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: center;
+   padding: 24px; 
+}
+.eatsure>div{
+  background-color: transparent;
+  position: relative;
+  margin-left: 2px;
+  margin-right: 2px;
+  width: 6cm;
+  top:10px;
+  text-align: center; 
+  color: white;
+  font-size: 18px;
+  padding: 6px;
+}
+.eatsure_pic{
+  position: relative;
+  left: -8px;
+  top: 2px;
+  size: 30px;
+  align-content: center;
+  justify-content: center;
+}
+
+.hr1{
+  position: relative;
+  display: flex;
+  transform: rotate(90deg);
+  border: 0;
+  width: 80px;
+  border-top: 1px solid #029bf9;
+  left: 100px;
+  bottom: 25px;
+ 
+}
+.hr2{
+  position: relative;
+  display: flex;
+  transform: rotate(90deg);
+  border: 0;
+  width: 80px;
+  border-top: 1px solid #029bf9;
+  left: 100px;
+  bottom: 40px ;
+}
+.hr3{
+  position: relative;
+  display: flex;
+  transform: rotate(90deg);
+  border: 0;
+  width: 30px;
+  border-top: 1px solid #4945BE;
+  left: 100px;
+  bottom: 40px ;
+}
+.button{
+  position: relative;
+  height: 40px;
+  width: 150px;
+  top: -4px;
+}
+.SafetyMeasureHeading{
+  position: relative;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  top:10px;
+  font-size: 20px
+}
+.SafetyMeasures{
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.SafetyMeasures>div{
+  position: relative;
+  text-align: center;
+  width: 200px;
+  padding: -10px;
+  font-size: 13px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.black_background{
+  position: relative;
+  height: 25cm;
+  width: 100%;
+  background-color: #2D282E;
+}
+
+.we_deliver_to{
+  position: relative;
+  color: #CBCBCB;
+  font-size: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 25px;
+  text-align: left;
+  margin-left: 40px;
+}
+.locations{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 25px;
+  margin-left: 40px;
+  top: -30px;
+  width: 1100px;
+}
+.locations>div{
+  position: relative;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  margin-top: 10px;
+  width: 360px;
+}
+.cubes{
+  position: absolute;
+  font-size: 10px;
+  margin-left: 220px;
+  bottom: 50px;
+}
+
+.popups{
+  background: rgba(17, 17, 17, 0.7);
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+}
+
+.popup_whitebg{
+  width: 330px;
+  height: 400px;
+  position: fixed;
+  top: 1.5cm;
+  left: 0px;
+  background: #fff;
+  padding: 20px;
+  animation-name: popup;
+  animation-direction: ltr;
+  animation-duration: 0.3s;
+  animation-iteration-count: initial;
+}
+@keyframes popup{
+  0% {width: 0px;}
+  100% {width: 330px;}
+}
+
+.popup_close_area_a{
+  position: relative;
+  cursor: pointer;
+  top: 440px;
+  height: 100%;
+  width: 100%;
+}
+.popup_close_area_b{
+  position: relative;
+  cursor: pointer;
+  top: -700px;
+  left: 370px;
+  height: 100%;
+  width: 100%;
+}
+.close {
+  cursor: pointer;
+  position: fixed ;
+  left: 340px;
+  top: 60px;
+  font-size: 30px;
+  color: #EBDA00;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  animation-duration: 0.3s;
+  animation-name: close;
+}
+@keyframes close{
+  0%{left: 0px;}
+  100%{left: 340px;}
+}
+.popup_text1{
+  position: relative;
+  text-align: center;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.popup_form_number{
+  background-color: rgba(17, 17, 17, 0.3);
+  position: relative;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  padding: 20px;
+
+  top: 20px;
+  height: 40px;
+  animation-name: numb;
+  animation-duration: 1.5s;
+}
+
+@keyframes numb{
+  0%{width: 0%;}
+  100%{width: 90%;}
+}
+
+
+.button_popup{
+  position: relative;
+background-color: #E1D104;
+color: black;
+font-family: Georgia, 'Times New Roman', Times, serif;
+top: 30px;
+width: 90px;
+height: 30px;
+border-radius: 5px;
+border: none;
+box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.new_user{
+  position: relative;
+  top:30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.link{
+  cursor: pointer;
+  color: rgb(109, 74, 28);
+}
+.hr_popup_left{
+  position: relative;
+  display: inline-block;
+  top: 0.2em;
+  width: 40%;
+  left: -10px;
+  border: none;
+  border-top: 1px solid black;
+}
+.hr_popup_right{
+  position: relative;
+  display: inline-block;
+  top: 0.2em;
+  width: 40%;
+  right: -10px;
+  border: none;
+  border-top: 1px solid black;
+}
+.style_hr{
+position: relative;
+top: 30px;
+}
+.fb_button{
+  display: block;
+  position: relative;
+  top: 70px;
+  background-color: transparent;
+  height: 50px;
+  width: 250px;
+  border: 1px solid#507CC0;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fb_logo{
+  position: relative;
+  color: #029bf9;
+  width: 30%;
+  left: -15px;
+  top: 14px;
+}
+.fb_text_bg{
+  position: relative;
+  color: white;
+  background-color: #029bf9;
+  right: -43px;
+  margin-top: -22px;
+  border-radius: 0 10px 10px 0;
+  width: 150px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  height: 17px;
+  padding: 16px 25px;
+}
+.deco{
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.ggl_button{
+  display: block;
+  position: relative;
+  top: 90px;
+  background-color: transparent;
+  height: 50px;
+  width: 250px;
+  border: 1px solid #DF4930;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ggl_icon{
+  position: relative;
+  width: 6%;
+  left: -95px;
+  top: 17px;
+}
+.ggl_text_bg{
+  position: relative;
+  color: white;
+  background-color: #DF4930;
+  right: -43px;
+  margin-top: -19px;
+  border-radius: 0 10px 10px 0;
+  width: 150px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  height: 17px;
+  padding: 16.5px 25px;
+  font-size: 13px;
+}
+.pop{
+  background: rgba(17, 17, 17, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0px;
+  left: 0;
+}
+.enter_name{
+  position: relative;
+  top: 50px;
+  height: 50px;
+  width: 80%;
+  font-size: 20px;
+  font-family: monospace;
+}
+.enter_email{
+  position: relative;
+  top: 80px;
+  height: 50px;
+  width: 80%;
+  font-size: 20px;
+  font-family: monospace;
+}
+.smth{
+  position: relative;
+  top:50px
+}
