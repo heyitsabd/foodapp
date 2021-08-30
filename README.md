@@ -72,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # Developer Inof
 - Abdullah Ahmad
+-I am an Enginnering Student, From Banglore, India. 
