@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css'
-//
 import './App.css';
 import design1 from './images/design1.svg'
 import biryani from './images/biryani.jpg'
