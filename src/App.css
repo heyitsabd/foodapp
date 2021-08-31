@@ -354,10 +354,8 @@ height: 33cm;
 .popups{
   background: rgba(17, 17, 17, 0.7);
   position: fixed;
-  overflow: hidden;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   left: 0;
 }
 

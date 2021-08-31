@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Popup = (p) => {
+
   return (
-    <div  className="popups" >
+    <div className="popups" >
       <div >
       {p.content}
       </div>
