@@ -2,21 +2,17 @@ import React, { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css'
 import './App.css';
-import Login from './components/loginComponent';
 import design1 from './images/design1.svg'
 import biryani from './images/biryani.jpg'
 import logo from './images/logo.png'
 import design from './images/picture.png'
 import { APP_CONSTANTS, SAFETY_RULES, } from "./constants/index";
 import Popup from './popup.js';
-import Pop from './components/pop';
 import Slide from './components/crousel'
 import Peachbg from './components/peachbg';
 import Blackbg from './components/blackbg';
 import Whitebg from './components/whitebg';
 import google from './images/google.svg'
-import Login2 from './components/login2';
-// import PhoneInput from 'react-phone-number-input';
 
 function App() {
   const [isOpen, setIsOpen] = useState()
