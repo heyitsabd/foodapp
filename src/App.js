@@ -48,7 +48,7 @@ function App() {
         </button>
       </div>
 
-      <div >
+      <div>
         {isOpen && <Popup
           content={
             <div>
