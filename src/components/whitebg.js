@@ -9,7 +9,7 @@ function Whitebg() {
             </div>
 
             <div>
-                {SAFETY_RULES.map((item, indx) => {
+                {SAFETY_RULES.map((item, index) => {
                     return (
                         <div className="para">
                             <img src={item.imageSource} className="safety" ></img>
