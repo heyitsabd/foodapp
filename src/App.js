@@ -36,17 +36,20 @@ function App() {
   const [email,setEmail] = useState("");
 
   const emailWarning = (event) =>{
-    // console.log("oncontinue", {event, email})
+   
 
    if(email.includes("@")){
-
-      alert("REGISTERED")
+      if(value.length==13){
+        alert("REGISTERED")
+      }
+      else{
+        alert("Invalid Input")
+        event.preventDefault()
+      }
     }
    
-    else{
-      alert("Invalid Input")
-      event.preventDefault()
-    }
+   
+  
 
   }
   const [isLoginVisible, updateLoginVisibility] = useState(true);
@@ -117,7 +120,7 @@ function App() {
                     <form>
                   <input type="name" className="enter_name" placeholder="ENTER YOUR NAME*"></input>
                   <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" onChange={e=>{
-                    // console.log("onEmalChamge",e)
+                    console.log("onEmalChamge",e)
                     setEmail(e.target.value)
                   }}>
                     </input><br /><br />
