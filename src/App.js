@@ -40,7 +40,7 @@ function App() {
    
 
    if(email.includes("@")){
-    if(email.includes(".com")){
+    if(email.includes(".com")|| email.includes(".in")){
       if(value.length==13){
         alert("REGISTERED")
       }
@@ -53,7 +53,6 @@ function App() {
       event.preventDefault()
       alert("Invalid Input")
     }
-      
     }
     
     else{
