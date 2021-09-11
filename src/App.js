@@ -35,10 +35,12 @@ function App() {
 
   const [email,setEmail] = useState("");
 
+
   const emailWarning = (event) =>{
    
 
    if(email.includes("@")){
+    if(email.includes(".com")){
       if(value.length==13){
         alert("REGISTERED")
       }
@@ -46,6 +48,17 @@ function App() {
         alert("Invalid Input")
         event.preventDefault()
       }
+    }
+    else{
+      event.preventDefault()
+      alert("Invalid Input")
+    }
+      
+    }
+    
+    else{
+      alert("Invalid Input")
+      event.preventDefault()
     }
    
    
@@ -128,8 +141,8 @@ function App() {
                      className="continue" 
                      onClick={(events) =>{
                       emailWarning(events)
+                      
                     }} 
-                    
                      >
                        Continue
                        </button>
