@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import validator from 'validator';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css'
 import './App.css';
@@ -20,48 +19,48 @@ function App() {
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
-  
+
   const [value, setValue] = useState();
   const warning = (props) => {
     if (value.length == 13) {
       alert("OTP SENT")
     }
-    
+
     else {
       alert("INVALID NUMBER")
-    props.preventDefault()
+      props.preventDefault()
     }
   }
 
-  const [email,setEmail] = useState("");
+  const [email, setEmail] = useState("");
 
 
-  const emailWarning = (event) =>{
-   
+  const emailWarning = (event) => {
 
-   if(email.includes("@")){
-    if(email.includes(".com")|| email.includes(".in")){
-      if(value.length==13){
-        alert("REGISTERED")
+
+    if (email.includes("@")) {
+      if (email.includes(".com") || email.includes(".in")) {
+        if (value.length == 13) {
+          alert("REGISTERED")
+        }
+        else {
+          alert("Invalid Input")
+          event.preventDefault()
+        }
       }
-      else{
-        alert("Invalid Input")
+      else {
         event.preventDefault()
+        alert("Invalid Input")
       }
     }
-    else{
-      event.preventDefault()
-      alert("Invalid Input")
-    }
-    }
-    
-    else{
+
+    else {
       alert("Invalid Input")
       event.preventDefault()
     }
-   
-   
-  
+
+
+
 
   }
   const [isLoginVisible, updateLoginVisibility] = useState(true);
@@ -129,22 +128,22 @@ function App() {
                     className="popup_form_number"
                     placeholder="Enter phone number"
                     onChange={setValue} />
-                    <form>
-                  <input type="name" className="enter_name" placeholder="ENTER YOUR NAME*"></input>
-                  <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" onChange={e=>{
-                    console.log("onEmalChamge",e)
-                    setEmail(e.target.value)
-                  }}>
+                  <form>
+                    <input type="name" className="enter_name" placeholder="ENTER YOUR NAME*"></input>
+                    <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" onChange={e => {
+                      console.log("onEmalChamge", e)
+                      setEmail(e.target.value)
+                    }}>
                     </input><br /><br />
-                  <button
-                     className="continue" 
-                     onClick={(events) =>{
-                      emailWarning(events)
-                      
-                    }} 
-                     >
-                       Continue
-                       </button>
+                    <button
+                      className="continue"
+                      onClick={(events) => {
+                        emailWarning(events)
+
+                      }}
+                    >
+                      Continue
+                    </button>
                   </form>
                   <p className="smth">Alredy registered?</p><a onClick={Registration} className="smth" ><u>LOGIN</u></a>
                 </div>
