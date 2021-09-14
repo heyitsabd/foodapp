@@ -20,7 +20,7 @@ function App() {
     setIsOpen(!isOpen);
   }
 
-  const [value, setValue] = useState();
+  const [value, setValue] = useState("");
   const warning = (props) => {
     if (value.length == 13) {
       alert("OTP SENT")
@@ -127,8 +127,8 @@ function App() {
                   <PhoneInput
                     className="popup_form_number"
                     placeholder="Enter phone number"
-                    onChange={setValue} />
-                  <form>
+                    onChange={setValue} /> 
+                  <form> 
                     <input type="name" className="enter_name" placeholder="ENTER YOUR NAME*"></input>
                     <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" onChange={e => {
                       console.log("onEmalChamge", e)
@@ -182,3 +182,4 @@ function App() {
   );
 }
 export default App;
+// why cant we use onChange={e=>{setValue(e.target.value)}}
