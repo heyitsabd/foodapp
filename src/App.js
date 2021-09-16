@@ -38,15 +38,23 @@ function App() {
   // console.log(validEmail('abd@gmail.com'))
 
   const [email, setEmail] = useState('');
-
+  const[userName,setUserName]= useState("")
 
   const emailWarning = (event) => {
     var regEx = /\S+@\S+\.\S+/;
+    var RegEx2 = /^[A-Za-z. ]{5,29}$/;
     if (regEx.test(email)) {
       
         if (value.length === 13) {
+          if(RegEx2.test(userName)){
             alert("REGISTERED")
+        } 
+        else{
+          alert("Invalid Input")
+          event.preventDefault()
+        }
           }
+         
           else {
             alert("Invalid Input")
             event.preventDefault()
@@ -58,7 +66,8 @@ function App() {
       event.preventDefault()
     }
 
-
+   
+    
 
 
   }
@@ -127,7 +136,7 @@ function App() {
                     placeholder="Enter phone number"
                     onChange={setValue} /> 
                   <form> 
-                    <input type="name" className="enter_name" placeholder="ENTER YOUR NAME*"></input>
+                    <input type="name" className="enter_name" placeholder="ENTER YOUR NAME*" onChange={e=>{setUserName(e.target.value)}}></input>
                     <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" onChange={e => {
                       // console.log("onEmailChange", e)
                       setEmail(e.target.value)
