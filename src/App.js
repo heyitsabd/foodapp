@@ -22,7 +22,7 @@ function App() {
 
   const [value, setValue] = useState("");
   const warning = (props) => {
-    if (value.length == 13) {
+    if (value.length === 13) {
       alert("OTP SENT")
     }
 
@@ -31,27 +31,26 @@ function App() {
       props.preventDefault()
     }
   }
+  // const validEmail= (email) =>{
+     
+  //     return regEx.test(email)
+  // }
+  // console.log(validEmail('abd@gmail.com'))
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
 
   const emailWarning = (event) => {
-
-
-    if (email.includes("@")) {
-      if (email.includes(".com") || email.includes(".in")) {
-        if (value.length == 13) {
-          alert("REGISTERED")
-        }
-        else {
-          alert("Invalid Input")
-          event.preventDefault()
-        }
-      }
-      else {
-        event.preventDefault()
-        alert("Invalid Input")
-      }
+    var regEx = /\S+@\S+\.\S+/;
+    if (regEx.test(email)) {
+      
+        if (value.length === 13) {
+            alert("REGISTERED")
+          }
+          else {
+            alert("Invalid Input")
+            event.preventDefault()
+          }
     }
 
     else {
@@ -118,7 +117,6 @@ function App() {
                           </a>
                         </button>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -131,7 +129,7 @@ function App() {
                   <form> 
                     <input type="name" className="enter_name" placeholder="ENTER YOUR NAME*"></input>
                     <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" onChange={e => {
-                      console.log("onEmalChamge", e)
+                      // console.log("onEmailChange", e)
                       setEmail(e.target.value)
                     }}>
                     </input><br /><br />
@@ -139,7 +137,6 @@ function App() {
                       className="continue"
                       onClick={(events) => {
                         emailWarning(events)
-
                       }}
                     >
                       Continue
@@ -182,4 +179,4 @@ function App() {
   );
 }
 export default App;
-// why cant we use onChange={e=>{setValue(e.target.value)}}
+// why cant we use onChange={e=>{setValue(e.target.value)}}f
