@@ -41,7 +41,7 @@ function App() {
   const[userName,setUserName]= useState("")
 
   const emailWarning = (event) => {
-    var regEx = /\S+@\S+\.\S+/;
+    var regEx = /^[A-Za-z_.\]{3,}[1-9]{1,}@[a-z.\]{3,30}[.]{1}[a-z]{1,}[.]{1}[a-zA-z.]{1,5}$/;
     var RegEx2 = /^[A-Za-z. ]{5,29}$/;
     if (regEx.test(email)) {
       
