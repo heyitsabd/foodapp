@@ -8,7 +8,7 @@ import logo from './images/logo.png'
 import design from './images/picture.png'
 import { APP_CONSTANTS, SAFETY_RULES, } from "./constants/index";
 import Popup from './popup.js';
-import Slide from './components/crousel'
+import Slide from './components/crousel';
 import Peachbg from './components/peachbg';
 import Blackbg from './components/blackbg';
 import Whitebg from './components/whitebg';
@@ -50,19 +50,19 @@ function App() {
             alert("REGISTERED")
         } 
         else{
-          alert("Invalid Input")
+          alert("Username must contain a blank space and no special character with atleast 5 char")
           event.preventDefault()
         }
           }
-         
+          
           else {
-            alert("Invalid Input")
+            alert("Number must be of 10 digits")
             event.preventDefault()
           }
     }
 
     else {
-      alert("Invalid Input")
+      alert("Email is Invalid")
       event.preventDefault()
     }
 
@@ -134,13 +134,15 @@ function App() {
                   <PhoneInput
                     className="popup_form_number"
                     placeholder="Enter phone number"
+                    name="phnumber"
                     onChange={setValue} /> 
                   <form> 
-                    <input type="name" className="enter_name" placeholder="ENTER YOUR NAME*" onChange={e=>{setUserName(e.target.value)}}></input>
+                    <input type="name" className="enter_name"  placeholder="ENTER YOUR NAME*" onChange={e=>{setUserName(e.target.value)}}></input>
+                   
                     <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" onChange={e => {
-                      // console.log("onEmailChange", e)
-                      setEmail(e.target.value)
+                     setEmail(e.target.value)
                     }}>
+                     
                     </input><br /><br />
                     <button
                       className="continue"

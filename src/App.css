@@ -594,3 +594,8 @@ top: 30px;
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.errmsg1{
+position: relative;
+color: #2D282E;
+top: 80px
+}
