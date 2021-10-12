@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import React from 'react';
 
 const Popup = (p) => {
-
+  
   return (
+    
     <div className="popups" >
       <div >
       {p.content}
@@ -13,6 +15,7 @@ const Popup = (p) => {
        <div className="popup_close_area_a" onClick={p.handleClose}>
          
        </div>
+
        <div className="popup_close_area_b" onClick={p.handleClose}>
          
          </div>

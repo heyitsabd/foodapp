@@ -14,14 +14,16 @@ import Blackbg from './components/blackbg';
 import Whitebg from './components/whitebg';
 import google from './images/google.svg'
 
+
 function App() {
   const [isOpen, setIsOpen] = useState()
   const togglePopup = () => {
     setIsOpen(!isOpen);
   }
 
+
   const [value, setValue] = useState("");
-  const warning = (props) => {
+  const warning = (props) => {            
     if (value.length === 13) {
       alert("OTP SENT")
     }
@@ -31,46 +33,61 @@ function App() {
       props.preventDefault()
     }
   }
-  // const validEmail= (email) =>{
-     
-  //     return regEx.test(email)
-  // }
-  // console.log(validEmail('abd@gmail.com'))
 
   const [email, setEmail] = useState('');
   const[userName,setUserName]= useState("")
+  const[error,setError]=useState('')
+  
+  const buttonPress=(btn)=>{
+    if(error==""){
+      alert("Registered")
+    }
+    else if(error=="Write Your Name"){
+      btn.preventDefault();
+    }
+    else if(error=="Invalid Input retype your name"){
+      btn.preventDefault();
+    }
+  }
 
   const emailWarning = (event) => {
     var regEx = /^[A-Za-z_.\]{3,}[1-9]{1,}@[a-z.\]{3,30}[.]{1}[a-z]{1,}[.]{1}[a-zA-z.]{1,5}$/;
-    var RegEx2 = /^[A-Za-z. ]{5,29}$/;
-    if (regEx.test(email)) {
+    var RegEx2 = /^[A-Za-z. ]{1,15}$/;
+    setUserName(event.target.value)
+    // if (regEx.test(email)) {
       
-        if (value.length === 13) {
-          if(RegEx2.test(userName)){
-            alert("REGISTERED")
+    //     if (value.length === 13) {
+          // if(RegEx2.test(userName)){
+            if(RegEx2.test(event.target.value)){
+            setError("")
         } 
-        else{
-          alert("Username must contain a blank space and no special character with atleast 5 char")
+      //   if(RegEx2.test(userName)){
+      //     setUserName("REGISTERED")
+      // } 
+          else if(event.target.value.length == 0){
+              setError("Write Your Name")
+              event.preventDefault();
+          }
+        else {
+          setError("Invalid Input retype your name")
+          // alert("check username input");
           event.preventDefault()
         }
-          }
+    //       }
           
-          else {
-            alert("Number must be of 10 digits")
-            event.preventDefault()
-          }
-    }
+    //       else {
+    //         // alert("Number must be of 10 digits")
+    //         event.preventDefault()
+    //       }
+    // }
 
-    else {
-      alert("Email is Invalid")
-      event.preventDefault()
-    }
-
-   
-    
-
+    // else {
+    //   alert("Email is Invalid")
+    //   event.preventDefault()
+    // }
 
   }
+  console.log(userName)
   const [isLoginVisible, updateLoginVisibility] = useState(true);
   const Registration = () => {
     updateLoginVisibility(!isLoginVisible)
@@ -92,7 +109,7 @@ function App() {
             <div>
               {isLoginVisible ? (
                 <div>
-                  <div className="popup_whitebg">
+                  <div className="popup_whitebg"> 
                     <div className="popup_text1">
                       {APP_CONSTANTS.popupText}
                       <form>
@@ -131,23 +148,36 @@ function App() {
                 </div>
               ) : (
                 <div className="popup_whitebg">
-                  <PhoneInput
+                  {/* <PhoneInput
                     className="popup_form_number"
                     placeholder="Enter phone number"
                     name="phnumber"
-                    onChange={setValue} /> 
+                    onChange={setValue} />  */}
                   <form> 
-                    <input type="name" className="enter_name"  placeholder="ENTER YOUR NAME*" onChange={e=>{setUserName(e.target.value)}}></input>
+                    <input type="name" className="enter_name" 
+                    placeholder="ENTER YOUR NAME*" onChange={(e)=> emailWarning(e)}></input>
+                     {/* <input type="name" className="enter_name" 
+                    placeholder="ENTER YOUR NAME*" onChange={(e)=> setUserName(e.target.value)}></input> */}
+                   <div className="errmsg4" ><b>{error}</b></div> 
                    
-                    <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" onChange={e => {
-                     setEmail(e.target.value)
+                    {/* <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" 
+                    onChange={e => {setEmail(e.target.value)
                     }}>
-                     
-                    </input><br /><br />
-                    <button
+
+                    </input>
+                   
+                    <br /><br />
+                    <div className="errmsg4">{email}</div> */}
+                    {/* <button
                       className="continue"
-                      onClick={(events) => {
-                        emailWarning(events)
+                      onClick={(event) => {
+                        buttonPress(event)
+                      }}
+                    > */}
+                     <button
+                      className="continue"
+                      onClick={(event) => {
+                        buttonPress(event)
                       }}
                     >
                       Continue
@@ -162,6 +192,7 @@ function App() {
       </div>
 
       <div>
+        
         <img className="logo" src={logo}>
         </img>
         <form className="search_engine" action="/action_page.php" >
@@ -190,4 +221,3 @@ function App() {
   );
 }
 export default App;
-// why cant we use onChange={e=>{setValue(e.target.value)}}f
