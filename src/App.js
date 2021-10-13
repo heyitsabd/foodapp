@@ -37,7 +37,8 @@ function App() {
   const [email, setEmail] = useState('');
   const[userName,setUserName]= useState("")
   const[error,setError]=useState('')
-  
+  const[error2,setError2]=useState('')
+
   const buttonPress=(btn)=>{
     if(error==""){
       alert("Registered")
@@ -47,11 +48,37 @@ function App() {
     }
     else if(error=="Invalid Input retype your name"){
       btn.preventDefault();
+      }
+      else if(error2 == ""){
+        alert("Registered")
+    }
+    else if(error2 == "Write Your Email Id"){
+        btn.preventDefault();
+    }
+    else if(error2 == "Invalid Input Retype your Email"){
+        btn.preventDefault()
+    }
+    
+  }
+  const emailWarning = (em) =>{
+    setEmail(em.target.value)
+    var regEx = /^[A-Za-z_.\]{3,}[1-9]{1,}@[a-z.\]{3,30}[.]{1}[a-z]{1,}[.]{1}[a-zA-z.]{1,5}$/;
+    if(regEx.test(em.target.value)){
+      setError2("")
+    }
+    else if(em.target.value.length == 0){
+        setError2("Write Your Email Id")
+        em.preventDefault();
+    }
+    else {
+      setError2("Invalid Input Retype your Email")
+      em.preventDefault();
     }
   }
 
-  const emailWarning = (event) => {
-    var regEx = /^[A-Za-z_.\]{3,}[1-9]{1,}@[a-z.\]{3,30}[.]{1}[a-z]{1,}[.]{1}[a-zA-z.]{1,5}$/;
+
+  const userNameWarning = (event) => {
+    
     var RegEx2 = /^[A-Za-z. ]{1,15}$/;
     setUserName(event.target.value)
     // if (regEx.test(email)) {
@@ -87,6 +114,7 @@ function App() {
     // }
 
   }
+  console.log(email)
   console.log(userName)
   const [isLoginVisible, updateLoginVisibility] = useState(true);
   const Registration = () => {
@@ -155,19 +183,18 @@ function App() {
                     onChange={setValue} />  */}
                   <form> 
                     <input type="name" className="enter_name" 
-                    placeholder="ENTER YOUR NAME*" onChange={(e)=> emailWarning(e)}></input>
+                    placeholder="ENTER YOUR NAME*" onChange={(e)=> userNameWarning(e)}></input>
                      {/* <input type="name" className="enter_name" 
                     placeholder="ENTER YOUR NAME*" onChange={(e)=> setUserName(e.target.value)}></input> */}
                    <div className="errmsg4" ><b>{error}</b></div> 
                    
-                    {/* <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" 
-                    onChange={e => {setEmail(e.target.value)
-                    }}>
+                    <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" 
+                    onChange={(em) => emailWarning(em)}>
 
                     </input>
                    
                     <br /><br />
-                    <div className="errmsg4">{email}</div> */}
+                    <div className="errmsg4"><b>{error2}</b></div>
                     {/* <button
                       className="continue"
                       onClick={(event) => {
@@ -183,7 +210,7 @@ function App() {
                       Continue
                     </button>
                   </form>
-                  <p className="smth">Alredy registered?</p><a onClick={Registration} className="smth" ><u>LOGIN</u></a>
+                    <p className="smth">Alredy registered?</p><a onClick={Registration} className="smth" ><u>LOGIN</u></a>
                 </div>
               )}
             </div>}
