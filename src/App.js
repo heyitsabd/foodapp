@@ -16,12 +16,18 @@ import google from './images/google.svg'
 
 
 function App() {
-  const [isOpen, setIsOpen] = useState()
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
+  const [isOpen, setIsOpen] = useState(false)
+
+  const togglePopup = () =>{
+    setIsOpen(!isOpen)
+    onModalClose();
   }
 
-
+  const onModalClose = () => {
+    //clear the modal states.
+    setError("")
+    setError2("");
+  }
   const [value, setValue] = useState("");
   const warning = (props) => {            
     if (value.length === 13) {
@@ -40,7 +46,8 @@ function App() {
   const[error2,setError2]=useState('')
 
   const buttonPress=(btn)=>{
-    if(error==""){
+
+    if(error=="Input Valid" && error2=="Input Valid"){
       alert("Registered")
     }
     else if(error=="Write Your Name"){
@@ -48,23 +55,45 @@ function App() {
     }
     else if(error=="Invalid Input retype your name"){
       btn.preventDefault();
-      }
-      else if(error2 == ""){
-        alert("Registered")
-    }
+      }   
     else if(error2 == "Write Your Email Id"){
         btn.preventDefault();
     }
     else if(error2 == "Invalid Input Retype your Email"){
         btn.preventDefault()
     }
-    
+    else if(error=="" && error2==""){
+        btn.preventDefault()
+    }
+    else if(error=="Input Valid" && error2==""){
+            btn.preventDefault()
+    }
+    else if(error=="" && error2=="Input Valid"){
+      btn.preventDefault()
+    }
+    // if(error=="Write Your Name"){
+    //          if(error=="Invalid Input Write Your Name"){
+    //             if(error==""&&error2==""){
+    //                 alert("Registered")
+    //             }
+    //             btn.preventDefault()
+    //         }
+    //         btn.preventDefault()
+    // }
+    // if(error2== "Write Your Email Id"){
+    //       if(error2=="Invalid Input Retype your Email"){
+    //           btn.preventDefault()
+    //       }
+    //       btn.preventDefault()
+    // }
   }
+  
   const emailWarning = (em) =>{
     setEmail(em.target.value)
     var regEx = /^[A-Za-z_.\]{3,}[1-9]{1,}@[a-z.\]{3,30}[.]{1}[a-z]{1,}[.]{1}[a-zA-z.]{1,5}$/;
     if(regEx.test(em.target.value)){
-      setError2("")
+      setError2("Input Valid")
+     
     }
     else if(em.target.value.length == 0){
         setError2("Write Your Email Id")
@@ -81,37 +110,20 @@ function App() {
     
     var RegEx2 = /^[A-Za-z. ]{1,15}$/;
     setUserName(event.target.value)
-    // if (regEx.test(email)) {
-      
-    //     if (value.length === 13) {
-          // if(RegEx2.test(userName)){
+  
             if(RegEx2.test(event.target.value)){
-            setError("")
+            setError("Input Valid")
         } 
-      //   if(RegEx2.test(userName)){
-      //     setUserName("REGISTERED")
-      // } 
           else if(event.target.value.length == 0){
               setError("Write Your Name")
               event.preventDefault();
           }
         else {
           setError("Invalid Input retype your name")
-          // alert("check username input");
+         
           event.preventDefault()
         }
-    //       }
-          
-    //       else {
-    //         // alert("Number must be of 10 digits")
-    //         event.preventDefault()
-    //       }
-    // }
 
-    // else {
-    //   alert("Email is Invalid")
-    //   event.preventDefault()
-    // }
 
   }
   console.log(email)
@@ -176,16 +188,10 @@ function App() {
                 </div>
               ) : (
                 <div className="popup_whitebg">
-                  {/* <PhoneInput
-                    className="popup_form_number"
-                    placeholder="Enter phone number"
-                    name="phnumber"
-                    onChange={setValue} />  */}
                   <form> 
                     <input type="name" className="enter_name" 
                     placeholder="ENTER YOUR NAME*" onChange={(e)=> userNameWarning(e)}></input>
-                     {/* <input type="name" className="enter_name" 
-                    placeholder="ENTER YOUR NAME*" onChange={(e)=> setUserName(e.target.value)}></input> */}
+                    
                    <div className="errmsg4" ><b>{error}</b></div> 
                    
                     <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" 
@@ -195,12 +201,7 @@ function App() {
                    
                     <br /><br />
                     <div className="errmsg4"><b>{error2}</b></div>
-                    {/* <button
-                      className="continue"
-                      onClick={(event) => {
-                        buttonPress(event)
-                      }}
-                    > */}
+                    
                      <button
                       className="continue"
                       onClick={(event) => {
