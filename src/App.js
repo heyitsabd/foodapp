@@ -6,30 +6,30 @@ import design1 from './images/design1.svg'
 import biryani from './images/biryani.jpg'
 import logo from './images/logo.png'
 import design from './images/picture.png'
-import { APP_CONSTANTS, SAFETY_RULES, } from "./constants/index";
+import { APP_CONSTANTS, SAFETY_RULES } from "./constants/index";
 import Popup from './popup.js';
 import Slide from './components/crousel';
 import Peachbg from './components/peachbg';
 import Blackbg from './components/blackbg';
 import Whitebg from './components/whitebg';
-import google from './images/google.svg'
+import google from './images/google.svg';
 
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const togglePopup = () =>{
+  const togglePopup = () => {
     setIsOpen(!isOpen)
     onModalClose();
   }
 
   const onModalClose = () => {
     //clear the modal states.
-    setError("")
+    setError("");
     setError2("");
   }
   const [value, setValue] = useState("");
-  const warning = (props) => {            
+  const warning = (props) => {
     if (value.length === 13) {
       alert("OTP SENT")
     }
@@ -40,64 +40,53 @@ function App() {
     }
   }
 
+
+
   const [email, setEmail] = useState('');
-  const[userName,setUserName]= useState("")
-  const[error,setError]=useState('')
-  const[error2,setError2]=useState('')
+  const [userName, setUserName] = useState("")
+  const [error, setError] = useState("")
+  const [error2, setError2] = useState("")
 
-  const buttonPress=(btn)=>{
+ 
 
-    if(error=="Input Valid" && error2=="Input Valid"){
+  const buttonPress = (btn) => {
+
+    if (error == "Input Valid" && error2 == "Input Valid") {
       alert("Registered")
     }
-    else if(error=="Write Your Name"){
+    else if (error == "Write Your Name") {
       btn.preventDefault();
     }
-    else if(error=="Invalid Input retype your name"){
+    else if (error == "Invalid Input retype your name") {
       btn.preventDefault();
-      }   
-    else if(error2 == "Write Your Email Id"){
-        btn.preventDefault();
     }
-    else if(error2 == "Invalid Input Retype your Email"){
-        btn.preventDefault()
+    else if (error2 == "Write Your Email Id") {
+      btn.preventDefault();
     }
-    else if(error=="" && error2==""){
-        btn.preventDefault()
-    }
-    else if(error=="Input Valid" && error2==""){
-            btn.preventDefault()
-    }
-    else if(error=="" && error2=="Input Valid"){
+    else if (error2 == "Invalid Input Retype your Email") {
       btn.preventDefault()
     }
-    // if(error=="Write Your Name"){
-    //          if(error=="Invalid Input Write Your Name"){
-    //             if(error==""&&error2==""){
-    //                 alert("Registered")
-    //             }
-    //             btn.preventDefault()
-    //         }
-    //         btn.preventDefault()
-    // }
-    // if(error2== "Write Your Email Id"){
-    //       if(error2=="Invalid Input Retype your Email"){
-    //           btn.preventDefault()
-    //       }
-    //       btn.preventDefault()
-    // }
+    else if (error == "" && error2 == "") {
+      btn.preventDefault()
+    }
+    else if (error == "Input Valid" && error2 == "") {
+      btn.preventDefault()
+    }
+    else if (error == "" && error2 == "Input Valid") {
+      btn.preventDefault()
+    }
+
   }
-  
-  const emailWarning = (em) =>{
+
+  const emailWarning = (em) => {
     setEmail(em.target.value)
     var regEx = /^[A-Za-z_.\]{3,}[1-9]{1,}@[a-z.\]{3,30}[.]{1}[a-z]{1,}[.]{1}[a-zA-z.]{1,5}$/;
-    if(regEx.test(em.target.value)){
+    if (regEx.test(em.target.value)) {
       setError2("Input Valid")
-     
     }
-    else if(em.target.value.length == 0){
-        setError2("Write Your Email Id")
-        em.preventDefault();
+    else if (em.target.value.length == 0) {
+      setError2("Write Your Email Id")
+      em.preventDefault();
     }
     else {
       setError2("Invalid Input Retype your Email")
@@ -107,22 +96,21 @@ function App() {
 
 
   const userNameWarning = (event) => {
-    
     var RegEx2 = /^[A-Za-z. ]{1,15}$/;
     setUserName(event.target.value)
-  
-            if(RegEx2.test(event.target.value)){
-            setError("Input Valid")
-        } 
-          else if(event.target.value.length == 0){
-              setError("Write Your Name")
-              event.preventDefault();
-          }
-        else {
-          setError("Invalid Input retype your name")
-         
-          event.preventDefault()
-        }
+
+    if (RegEx2.test(event.target.value)) {
+      setError("Input Valid")
+    }
+    else if (event.target.value.length == 0) {
+      setError("Write Your Name")
+      event.preventDefault();
+    }
+    else {
+      setError("Invalid Input retype your name")
+
+      event.preventDefault()
+    }
 
 
   }
@@ -149,7 +137,7 @@ function App() {
             <div>
               {isLoginVisible ? (
                 <div>
-                  <div className="popup_whitebg"> 
+                  <div className="popup_whitebg">
                     <div className="popup_text1">
                       {APP_CONSTANTS.popupText}
                       <form>
@@ -188,21 +176,21 @@ function App() {
                 </div>
               ) : (
                 <div className="popup_whitebg">
-                  <form> 
-                    <input type="name" className="enter_name" 
-                    placeholder="ENTER YOUR NAME*" onChange={(e)=> userNameWarning(e)}></input>
-                    
-                   <div className="errmsg4" ><b>{error}</b></div> 
-                   
-                    <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*" 
-                    onChange={(em) => emailWarning(em)}>
+                  <form>
+                    <input type="name" className="enter_name"
+                      placeholder="ENTER YOUR NAME*" onChange={(e) => userNameWarning(e)}></input>
+
+                    <div className="errmsg4" style={{ color: error =="Input Valid" ? "green" : "red" }}><b>{error}</b></div>
+
+                    <input type="email" className="enter_email" placeholder="ENTER YOUR EMAIL ID*"
+                      onChange={(em) => emailWarning(em)}>
 
                     </input>
-                   
+
                     <br /><br />
-                    <div className="errmsg4"><b>{error2}</b></div>
-                    
-                     <button
+                    <div className="errmsg4" style ={{ color:error2 =="Input Valid"? "green":"red" }}><b>{error2}</b></div>
+
+                    <button
                       className="continue"
                       onClick={(event) => {
                         buttonPress(event)
@@ -211,7 +199,7 @@ function App() {
                       Continue
                     </button>
                   </form>
-                    <p className="smth">Alredy registered?</p><a onClick={Registration} className="smth" ><u>LOGIN</u></a>
+                  <p className="smth">Alredy registered?</p><a onClick={Registration} className="smth" ><u>LOGIN</u></a>
                 </div>
               )}
             </div>}
@@ -220,7 +208,7 @@ function App() {
       </div>
 
       <div>
-        
+
         <img className="logo" src={logo}>
         </img>
         <form className="search_engine" action="/action_page.php" >

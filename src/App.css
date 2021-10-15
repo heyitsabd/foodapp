@@ -602,7 +602,5 @@ top: 80px
 .errmsg4{
   position: relative;
   top: 60px;
-  color: rgb(197, 27, 27);
-  
-  
+  color: rgb(197, 27, 27) 
 }
