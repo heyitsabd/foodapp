@@ -13,7 +13,7 @@ import safety3 from '../images/safetyMeasures3.png';
 
 export const breakpoints = [
     { width: 100, itemsToShow: 1 },
-    { width: 700, itemsToShow: 2 },
+    { width: 550 , itemsToShow: 2 },
     { width: 1000, itemsToShow: 4 }
 ];
 
@@ -106,6 +106,7 @@ export const eatSure=[
     },
     {
         describe:"Medically Certified Staff",
+      
     }
 ]
 export const safetyRule=[

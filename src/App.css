@@ -1,14 +1,33 @@
-.body{
-width: 100%;
-height: 33cm;
+.bgimg{
+  position: relative;
+  width: 100%;
+  height: 33cm;
+ 
 }
+@media (max-width:1024px) {
+  .bgimg{
+    width: 100%;  
+    height: 25cm;  
+    overflow-x: hidden;
+  }
+}
+
+/* @media (min-width:680px) and (max-width:768px){
+  .bgimg{
+    width: 100%;  
+    height: 25cm;  
+    overflow-x: hidden;
+  
+  }
+} */
+
 .black{
   position: relative;
   background-color: #474747;
   width: 100%;
   height: 1.5cm;
-  top: 0px;
 }
+
 .yellow_button{
   display: block;
   position: relative;
@@ -27,52 +46,110 @@ height: 33cm;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
-  max-width: 100%;
+  margin-top: 10px;
+    max-width: 100%;
 }
-
-
+@media (  max-width:426px) {
+  .logo{
+      max-width: 80%;
+  }
+}
 .search_engine{
   display: flex;
-  margin: 300px 0 30px 0;  
+  
 }
-.search_engine > input{
 
+@media (  max-width:426px) {
+  .search_engine{
+    display: block;
+   
+  }
+ 
+}
+
+.search_engine > input{
+ 
   width: 500px;
   height: 40px;
   border: white;
   padding-left: 20px;
-  margin-top: -250px;
+  margin-top: 80px;
   margin-left: 300px;
   border-radius: 3px 0 0 3px;
- 
 }
+
+@media ( max-width:426px) {
+  .search_engine>input{
+    position: relative;
+    margin-left: 0px;
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+@media ( min-width:680px) and (max-width:768px) {
+  .search_engine>input{
+    position: relative;
+    margin-left: 10px;
+    left: 150px;
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+
+
 .search_engine > button{
+ 
   background-color: #474747;
   color: #c7bb0f;
   width: 200px;
   height: 42px;
   border:  solid#EBDA00;
-  margin-top: -250px;
+  margin-top: 80px;
   margin-left: auto;
   margin-right: 300px;
   border-radius: 0 3px 3px 0;
 }
+
+@media (  max-width:426px) {
+  .search_engine > button{
+    width: 100%;
+    margin-top: 0px;
+  }
+}
+@media ( min-width:680px ) and (max-width:768px){
+  .search_engine > button{
+    position: relative;
+    width: 50%;
+    left: 150px;
+    top: 0px;
+  }
+}
+
+
 .out{
   display: block;
+  position: relative;
+  margin-top: 800px;
 }
+
+@media (  max-width:426px) {
+ .out{
+   margin-top: 830px;
+ }
+}
+
 .card{
-  display: flex;
-  margin-top: -150px;
+  margin-top: -750px;
 }
+
 .arrow_styling{
   height: 40px;
   width: 40px;
   border:none;
   border-radius: 30cm 30cm 30cm 30cm;
   margin-top: 170px ;
-
 }
+
 .image{
   width: 200px;
   height: 200px;
@@ -86,104 +163,196 @@ height: 33cm;
   font-size: 25px;
   font-family: monospace;
 }
-.out1{
-  margin-top: -150px;
-  padding-bottom: 180px;
-}
 
 .design{
   display: block;
+
   width: 150px;
   margin-left: auto;
   margin-right: auto;
-  
+  margin-top: 80px;
 }
+
+@media (  max-width:426px) {
+  .design{
+    width: 100px;
+    margin-top: 20px;
+  }
+}
+
 .design2{
   display: block;
   width: 150px;
   margin-left: auto;
   margin-right: auto;
-
 }
+
+@media (  max-width:426px) {
+  .design2{
+    width: 100px;
+  }
+}
+
 .The_Royal_Menu{
   display: block;
-  margin-top: 20px;
   text-align: center;
   color:#F2E576;
 }
+
+@media (  max-width:426px) {
+  .The_Royal_Menu{
+    font-size: 10px;
+
+  }
+}
+
 .design3{
   display: block;
-  position: relative;
   width: 300px;
-  top: -25px;
+  margin-top: -1px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (  max-width:426px) {
+  .design3{
+    width: 200px;
+  }
 }
 .design4{
   display: block;
-  position: relative;
+  margin-top: -20px;
   width: 300px;
-  top: -65px;
   margin-left: auto;
   margin-right: auto;
 }
+@media (  max-width:426px) {
+  .design4{
+    width: 200px;
+    margin-top: -2px;
+  }
+
+}
 .experience_the_royalty{
-  position: relative;
   font-size: 30px;
-  top: -47px;
   text-align: center;
   color: #c7bb0f;
+  margin-top: 5px;
+}
+@media (  max-width:426px) {
+  .experience_the_royalty{
+    font-size: 20px;
+    margin-top: 14px;
+  }
 }
 .para1{
-  position: relative;
   text-align:center;
   color: white;
-  
+  margin-top: 45px;
+}
+@media (  max-width:426px) {
+  .para1{
+    font-size: 15px;
+  }
+}
+.whitebg{
+  display: block;
+  position: relative;
+  background-color: white;
+  height: 450px;
+}
+@media (max-width:426px) {
+  .whitebg{
+    top: 100px;
+    height: 550px;
+  }
+}
+@media (min-width:680px) and (max-width:768px){
+  .whitebg{
+    height: 700px;
+  }
 }
 .para2{
   position: relative;
+  top: 20px;
   text-align: center;
   color: black;
   font-size: 35px;
-  top: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+@media (  max-width:426px) {
+  .para2{
+    margin-top: 40px;
+    font-size: 17px;
+  }
+}
 .para3{
-  position: relative;
   text-align: center;
   color: #BBBBBB;
   font-size: 13px;
 }
-.safety{
-  position: relative;
-  left: -0.5cm;
+@media (  max-width:426px) {
+  .para3{
+    margin-top: 10px;
+    font-size: 10px;
+  }
 }
 .para{
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
   height: 50px;
-  left: 150px;
+  margin-left: 150px;
   width: 300px;
   margin-top: 30px;
   font-size: 15px;
+}
+@media (  max-width:426px) {
+  .para{
+   margin-left: 10px ;
+  }
 }
 .vedio{
   display: block;
   position: relative;
   float: right;
-  size: 100%;
-  height: 200px;
-  margin-top: -240px;
+  bottom: 230px;
+  height: 300px;
+  width: 600px;
+  border: none;
+ margin-left: 0;
   margin-right: 60px;
 }
+@media ( max-width:426px) {
+  .vedio{
+    top: 15px;
+   margin-right: 0px;
+    height: 200px;
+    width: 100%;
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .vedio{
+    top: 20px;
+  }
+}
+
 .peach_background{
   position: relative;
-  margin-top: 80px;
+  margin-top: 0px;
   height: 12cm;
   width: 100%;
   background-color: #FAEBCB;
+}
+@media (  max-width:426px) {
+  .peach_background{
+    top: 100px;
+    height: 20cm;
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .peach_background{
+    height: 13.5cm;
+  }
 }
 .bluebox{
   position: relative;
@@ -206,6 +375,26 @@ height: 33cm;
   height:120px;
   width: 0px;
 }
+@media (  max-width:426px) {
+  .bluebox::before{
+    display: flex;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 15px solid #FAEBCB;
+    border-right: 15px solid #4945BE;
+    border-bottom:15px solid #FAEBCB;
+    height:90px;
+    width: 0px;
+    
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .bluebox::before{
+    height: 170px;
+  }
+}
 .bluebox::after{
   content:'';
   position: absolute;
@@ -217,7 +406,47 @@ height: 33cm;
   height: 120px;
   width: 0px;
 }
+@media (  max-width:426px) {
+  .bluebox::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: 15px solid #FAEBCB;
+    border-left: 15px solid #4945BE;
+    border-bottom: 15px solid #FAEBCB;
+    height: 90px;
+    width: 0px;
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .bluebox::after{
+    height: 170px;
+  }
+}
+@media (  max-width:426px) {
+  .bluebox{
+    position: relative;
+    margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #4945BE;
+  height: 120px;
+  top: 30px;
+  }
+}
 
+@media (min-width:680px) and (max-width:768px) {
+  .bluebox{
+    position: relative;
+    margin-left: auto;
+  margin-right: auto;
+  width: 57%;
+  background-color: #4945BE;
+  height: 200px;
+  top: 30px;
+  }
+}
 
 .eatsure{
    display: flex;
@@ -226,38 +455,120 @@ height: 33cm;
    justify-content: center;
    align-items: center;
    padding: 24px; 
+   left: 300px;
 }
-.eatsure>div{
-  background-color: transparent;
+@media (  max-width:426px) {
+  .eatsure{
+    display: flex;
+    flex-wrap: wrap;
+    width: 10px;
+    left: 0px;
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .eatsure{
+    display: flex;
+    flex-wrap: wrap;
+    width: 10px;
+    left: 70px;
+    top: 50px;
+  }
+}
+
+.eatsure_text{
+  display: flex;
   position: relative;
-  margin-left: 2px;
-  margin-right: 2px;
-  width: 6cm;
-  top:10px;
-  text-align: center; 
+  flex-wrap: nowrap;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  width: 4cm;
+  top: -10px;
   color: white;
-  font-size: 18px;
-  padding: 6px;
+  
+}
+@media (  max-width:426px) {
+  .eatsure_text{
+    font-size: 12px;
+    width: 300px;
+    top:-67px;
+    margin-top: -65px;
+    left: 250px;
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .eatsure_text{
+    font-size: 12px;
+    width: 300px;
+    top:-90px;
+    margin-top: -55px;
+    left: 250px;
+  }
 }
 .eatsure_pic{
   position: relative;
   left: -8px;
-  top: 2px;
+  top: 1px;
   size: 30px;
   align-content: center;
   justify-content: center;
 }
 
+@media (  max-width:426px) {
+  .eatsure_pic{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    left: 30px;
+    height: 40px;
+    width: 70px;
+    margin-top: 10px; 
+  }
+}
+.eatsure_icon{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  position: relative;
+  color: white;
+  left: 100px;
+}
+@media (  max-width:426px) {
+  .eatsure_icon{
+    color: white;
+    flex-wrap: wrap;
+    left: 260px;
+    bottom: 100px;
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .eatsure_icon{
+    left: 255px;
+    bottom: 113px;
+  }
+}
 .hr1{
   position: relative;
-  display: flex;
   transform: rotate(90deg);
   border: 0;
   width: 80px;
   border-top: 1px solid #029bf9;
   left: 100px;
-  bottom: 25px;
- 
+  bottom: 35px;
+}
+@media (  max-width:426px) {
+  .hr1{
+    position: relative;
+    left: 70px;
+    bottom: 22px;
+    width: 110px;
+  }
+}
+@media (min-width: 680px) and (max-width:768px) {
+  .hr1{
+    left: 60px;
+    width: 110px;
+  }
 }
 .hr2{
   position: relative;
@@ -267,23 +578,38 @@ height: 33cm;
   width: 80px;
   border-top: 1px solid #029bf9;
   left: 100px;
-  bottom: 40px ;
+  bottom: 60px ;
 }
-.hr3{
-  position: relative;
-  display: flex;
-  transform: rotate(90deg);
-  border: 0;
-  width: 30px;
-  border-top: 1px solid #4945BE;
-  left: 100px;
-  bottom: 40px ;
+@media (  max-width:426px) {
+  .hr2{
+    visibility: hidden;
+  }
 }
+@media (min-width: 680px) and (max-width:768px) {
+  .hr2{
+    visibility: hidden;
+  }
+}
+
 .button{
   position: relative;
   height: 40px;
   width: 150px;
   top: -4px;
+}
+@media (  max-width:426px) {
+  .button{
+    top: -85px;
+    left: 170px;
+    height: 30px;
+    width: 120px;
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .button{
+    top: -100px;
+    left: 160px;
+  }
 }
 .SafetyMeasureHeading{
   position: relative;
@@ -293,15 +619,38 @@ height: 33cm;
   top:10px;
   font-size: 20px
 }
+@media (  max-width:426px) {
+  .SafetyMeasureHeading{
+    position: relative;
+    top: 30px;
+    font-size: 15px;
+  }
+}
 .SafetyMeasures{
   display: flex;
   position: relative;
   flex-wrap: nowrap;
   justify-content: center;
   align-content: center;
-  top: 20%;
+  top: 10%;
+  height: 80px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (  max-width:426px) {
+  .SafetyMeasures{
+    flex-wrap: wrap;
+    top: 150px;
+    height: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .SafetyMeasures{
+    top: -10px;
+  }
 }
 .SafetyMeasures>div{
   position: relative;
@@ -312,6 +661,35 @@ height: 33cm;
   margin-left: 25px;
   margin-right: 25px;
 }
+
+@media (  max-width:426px) {
+  .SafetyMeasures>div{
+    font-size: 11px;
+    height: 10px;
+    margin-top: 65px;
+  }
+}
+.cubes{
+  position: absolute;
+  font-size: 10px;
+  margin-left: 220px;
+  bottom: 50px;
+}
+@media (  max-width:426px) {
+  .cubes{
+    position: relative;
+    margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width:680px) and (max-width:768px) {
+  .cubes{
+    right: -30px;
+  }
+}
+
 .black_background{
   position: relative;
   height: 25cm;
@@ -338,6 +716,19 @@ height: 33cm;
   top: -30px;
   width: 1100px;
 }
+@media (  max-width:426px) {
+  .locations{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+@media (min-width:680px) and (max-width:768px) {
+  .locations{
+    width: 100%;
+  }
+}
 .locations>div{
   position: relative;
   font-size: 15px;
@@ -346,26 +737,20 @@ height: 33cm;
   margin-top: 10px;
   width: 360px;
 }
-.cubes{
-  position: absolute;
-  font-size: 10px;
-  margin-left: 220px;
-  bottom: 50px;
-}
 
 .popups{
-  background: rgba(17, 17, 17, 0.7);
   position: fixed;
   width: 100%;
   height: 100%;
-  left: 0;
+  left: 0px; 
+  
 }
 
 .popup_whitebg{
   width: 330px;
   height: 400px;
-  position: fixed;
-  top: 1.5cm;
+  position: relative;
+  top: 0px;
   left: 0px;
   background: #fff;
   padding: 20px;
@@ -379,21 +764,41 @@ height: 33cm;
   0% {width: 0px;}
   100% {width: 330px;}
 }
-
+@media (max-width:426px) {
+  .popup_whitebg{
+    height: 543px;
+    width: 90.6%;
+    overflow-y: hidden;
+  }
+}
 .popup_close_area_a{
-  position: relative;
+  position: fixed;
   cursor: pointer;
-  top: 440px;
-  height: 100%;
-  width: 100%;
+  top:  56px;
+  left: 370px;
+  height: 76.5%;
+  width: 70.9%;
+  background-color: rgba(24, 23, 23, 0.5);
+}
+@media (max-width:426px) {
+  .popup_close_area_a{
+    height: 0px;
+    width: 0px
+  }
 }
 .popup_close_area_b{
-  position: relative;
+  position: fixed;
   cursor: pointer;
-  top: -700px;
-  left: 370px;
+  top: 497px;
   height: 100%;
   width: 100%;
+  background-color: rgba(24, 23, 23, 0.5);
+}
+@media (max-width:426px) {
+  .popup_close_area_b{
+    height: 0px;
+    width: 0px
+  }
 }
 .close {
   cursor: pointer;
@@ -414,6 +819,11 @@ height: 33cm;
 @keyframes close{
   0%{left: 0px;}
   100%{left: 340px;}
+}
+@media (max-width:426px) {
+  .close{
+    left: 390px;
+  }
 }
 .popup_text1{
   position: relative;

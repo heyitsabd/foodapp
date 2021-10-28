@@ -6,7 +6,7 @@ import design1 from './images/design1.svg'
 import biryani from './images/biryani.jpg'
 import logo from './images/logo.png'
 import design from './images/picture.png'
-import { APP_CONSTANTS, SAFETY_RULES } from "./constants/index";
+import { APP_CONSTANTS} from "./constants/index";
 import Popup from './popup.js';
 import Slide from './components/crousel';
 import Peachbg from './components/peachbg';
@@ -122,15 +122,15 @@ function App() {
   }
 
   return (
-    <div className="body" style={{
-      backgroundImage: `url(${biryani})`,
-    }}>
+    <div className="bgimg" style={{backgroundImage:`url(${biryani})`, position: `relative` } }>
+  
+     {/* style={{backgroundImage:`url(${biryani})`, position: `relative` } } */}
       <div className="black">
         <button onClick={togglePopup} className="yellow_button">
           {APP_CONSTANTS.login}
         </button>
       </div>
-
+     
       <div>
         {isOpen && <Popup
           content={
@@ -224,6 +224,7 @@ function App() {
         </div>
         <Slide></Slide>
       </div>
+     
       <img src={design} className="design3"></img>
       <p className="experience_the_royalty"> {APP_CONSTANTS.expRoyality} </p>
       <img src={design1} className="design4"></img>

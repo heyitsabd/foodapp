@@ -8,15 +8,15 @@ return(
     <div className="bluebox">
         <div className="eatsure">
             <div>
-                <img src={eatsure} ></img>
+                <img className="eatsure_pic" src={eatsure} ></img>
                 <hr className="hr1"></hr>
             </div>
 
             {eatSure.map((item, index) => {
                 return (
                     <div>
-                        <i className="fa fa-check-square" ></i><br />
-                        {item.describe}
+                        <p className="eatsure_icon"><i className="fa fa-check-square"  ></i></p>
+                        <p className="eatsure_text">{item.describe}</p>
                         <hr className="hr2"></hr>
                     </div>
                 )
