@@ -64,11 +64,9 @@
     display: block;
    
   }
- 
 }
 
 .search_engine > input{
- 
   width: 500px;
   height: 40px;
   border: white;
@@ -80,7 +78,7 @@
 
 @media ( max-width:426px) {
   .search_engine>input{
-    position: relative;
+    padding-left: 10px;
     margin-left: 0px;
     width: 100%;
     border-radius: 0px;
@@ -88,15 +86,18 @@
 }
 @media ( min-width:680px) and (max-width:768px) {
   .search_engine>input{
-    position: relative;
     margin-left: 10px;
-    left: 150px;
     width: 100%;
     border-radius: 0px;
   }
 }
 
-
+@media (min-width:1024px) and (max-width:1440px) {
+  .search_engine>input{
+    width: 60%;
+    margin-left: 300px;
+  }
+}
 .search_engine > button{
  
   background-color: #474747;
@@ -118,13 +119,17 @@
 }
 @media ( min-width:680px ) and (max-width:768px){
   .search_engine > button{
-    position: relative;
+    margin-right: 10px;
     width: 50%;
     left: 150px;
     top: 0px;
   }
 }
-
+@media (min-width:1024px) and (max-width:1440px) {
+  .search_engine> .button{
+    width: 100%;
+  }
+}
 
 .out{
   display: block;
@@ -311,6 +316,12 @@
    margin-left: 10px ;
   }
 }
+@media (min-width:1024px) and (max-width:1200px) {
+  .para{
+    margin-left: 10px;
+  }
+}
+
 .vedio{
   display: block;
   position: relative;
@@ -482,6 +493,7 @@
   text-align: center;
   margin-left: 30px;
   margin-right: 30px;
+  left: 25px;
   width: 4cm;
   top: -10px;
   color: white;
@@ -493,7 +505,7 @@
     width: 300px;
     top:-67px;
     margin-top: -65px;
-    left: 250px;
+    left: 70%;
   }
 }
 @media (min-width:680px) and (max-width:768px) {
@@ -505,6 +517,14 @@
     left: 250px;
   }
 }
+
+@media (min-width:1024px) and (max-width:1200px) {
+  .eatsure_text{
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+}
+
 .eatsure_pic{
   position: relative;
   left: -8px;
@@ -519,10 +539,15 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    left: 30px;
+    left: 55%;
     height: 40px;
     width: 70px;
     margin-top: 10px; 
+  }
+}
+@media (min-width:1024px) and (max-width:1200px) {
+  .eatsure_pic{
+    left:10%
   }
 }
 .eatsure_icon{
@@ -531,13 +556,13 @@
   flex-direction: row;
   position: relative;
   color: white;
-  left: 100px;
+  left: 120px;
 }
 @media (  max-width:426px) {
   .eatsure_icon{
     color: white;
     flex-wrap: wrap;
-    left: 260px;
+    left: 74%;
     bottom: 100px;
   }
 }
@@ -548,6 +573,7 @@
   }
 }
 .hr1{
+  visibility: hidden;
   position: relative;
   transform: rotate(90deg);
   border: 0;
@@ -558,18 +584,21 @@
 }
 @media (  max-width:426px) {
   .hr1{
+    visibility: initial;
     position: relative;
-    left: 70px;
+    left: 75%;
     bottom: 22px;
     width: 110px;
   }
 }
 @media (min-width: 680px) and (max-width:768px) {
   .hr1{
+    visibility: initial;
     left: 60px;
     width: 110px;
   }
 }
+
 .hr2{
   position: relative;
   display: flex;
@@ -577,7 +606,7 @@
   border: 0;
   width: 80px;
   border-top: 1px solid #029bf9;
-  left: 100px;
+  left: -70px;
   bottom: 60px ;
 }
 @media (  max-width:426px) {
@@ -590,6 +619,11 @@
     visibility: hidden;
   }
 }
+@media (min-width:1024px) and (max-width:1200px) {
+  .hr2{
+    left: -70px;
+  }
+}
 
 .button{
   position: relative;
@@ -600,7 +634,8 @@
 @media (  max-width:426px) {
   .button{
     top: -85px;
-    left: 170px;
+    
+    left: 140%;
     height: 30px;
     width: 120px;
   }
@@ -609,6 +644,11 @@
   .button{
     top: -100px;
     left: 160px;
+  }
+}
+@media (min-width:1024px) and (max-width:1200px) {
+  .button{
+    left: 10%;
   }
 }
 .SafetyMeasureHeading{
@@ -786,6 +826,11 @@
     width: 0px
   }
 }
+@media (min-width:680px) and (max-width:768px) {
+  .popup_close_area_a{
+    height: 100%;
+  }
+}
 .popup_close_area_b{
   position: fixed;
   cursor: pointer;
@@ -800,6 +845,7 @@
     width: 0px
   }
 }
+
 .close {
   cursor: pointer;
   position: fixed ;
