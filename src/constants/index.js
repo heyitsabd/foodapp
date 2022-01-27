@@ -1,3 +1,6 @@
+//HARDCODES.
+
+
 import biryani1 from '../images/biryani1.jpg';
 import changezi from '../images/changezi.jpg';
 import dosa from '../images/dosa.jpg';

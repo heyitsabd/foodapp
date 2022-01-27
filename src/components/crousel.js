@@ -13,7 +13,7 @@ function Slide(){
           </button>
         )
       }
-     
+          
 return(
 <div className="out">
           <Carousel breakPoints={breakpoints} className="card" itemsToScroll={1} pagination={false} renderArrow={myArrow} >

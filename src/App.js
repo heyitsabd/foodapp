@@ -22,11 +22,15 @@ function App() {
     setIsOpen(!isOpen)
     onModalClose();
   }
+  
 
   const onModalClose = () => {
     //clear the modal states.
     setError("");
     setError2("");
+    setUserName("");
+    setEmail("");
+    
   }
   const [value, setValue] = useState("");
   const warning = (props) => {
@@ -47,7 +51,7 @@ function App() {
   const [error, setError] = useState("")
   const [error2, setError2] = useState("")
 
- 
+ console.log(email);
 
   const buttonPress = (btn) => {
 
@@ -55,7 +59,7 @@ function App() {
       alert("Registered")
     }
     else if (error == "Write Your Name") {
-      btn.preventDefault();
+      btn.preventDefault();     //preventDefault()is an inbuilt fcn.It stops the default action that is to be performed.
     }
     else if (error == "Invalid Input retype your name") {
       btn.preventDefault();
@@ -94,7 +98,6 @@ function App() {
     }
   }
 
-
   const userNameWarning = (event) => {
     var RegEx2 = /^[A-Za-z. ]{1,15}$/;
     setUserName(event.target.value)
@@ -108,14 +111,13 @@ function App() {
     }
     else {
       setError("Invalid Input retype your name")
-
       event.preventDefault()
     }
-
-
   }
   console.log(email)
   console.log(userName)
+  console.log(error)
+  console.log(error2)
   const [isLoginVisible, updateLoginVisibility] = useState(true);
   const Registration = () => {
     updateLoginVisibility(!isLoginVisible)
@@ -212,9 +214,13 @@ function App() {
         <img className="logo" src={logo}>
         </img>
         <form className="search_engine" action="/action_page.php" >
-          <input type="text" placeholder="Type your location here..."></input>
+          <input  type="text" placeholder="Type your location here..." >
+
+          </input>
           <button value="ORDER FOOD">{APP_CONSTANTS.placeHolder}</button>
         </form>
+        
+        
         <div className="out1">
           <img src={design} className="design"></img>
           <div className="The_Royal_Menu">
