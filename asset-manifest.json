@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/foodapp/static/css/main.6d88b22e.css",
+    "main.js": "/foodapp/static/js/main.a96cecea.js",
+    "static/js/753.c7138f6c.chunk.js": "/foodapp/static/js/753.c7138f6c.chunk.js",
+    "static/media/mutton.png": "/foodapp/static/media/mutton.2fb39510efd33878d3a6.png",
+    "static/media/biryani.jpg": "/foodapp/static/media/biryani.1dc8ae33f38bc9f64adb.jpg",
+    "static/media/thal.jpg": "/foodapp/static/media/thal.66c06403268d190172c4.jpg",
+    "static/media/changezi.jpg": "/foodapp/static/media/changezi.3ac134915df7eec43acb.jpg",
+    "static/media/paneer.jpg": "/foodapp/static/media/paneer.aa82fad2f676c86f40e7.jpg",
+    "static/media/logo.png": "/foodapp/static/media/logo.c74a33c1b2a131904024.png",
+    "static/media/biryani1.jpg": "/foodapp/static/media/biryani1.0188dd0caec699c20d0c.jpg",
+    "static/media/picture.png": "/foodapp/static/media/picture.abf1d6dafff827f6c170.png",
+    "static/media/palak.jpg": "/foodapp/static/media/palak.55ea12056e82025360ac.jpg",
+    "static/media/samosa.jpg": "/foodapp/static/media/samosa.e44939a4d3d21df77853.jpg",
+    "static/media/afghani.jpg": "/foodapp/static/media/afghani.78c5ccb66f89987951a9.jpg",
+    "static/media/design1.svg": "/foodapp/static/media/design1.916ae01d4d77076f634c609eb9266de5.svg",
+    "static/media/design5.svg": "/foodapp/static/media/design5.ebfca5d95ad98f85eb20c3f10750960e.svg",
+    "static/media/google.svg": "/foodapp/static/media/google.e630965830cd4ec4aa816e2a3c1d0a38.svg",
+    "index.html": "/foodapp/index.html",
+    "main.6d88b22e.css.map": "/foodapp/static/css/main.6d88b22e.css.map",
+    "main.a96cecea.js.map": "/foodapp/static/js/main.a96cecea.js.map",
+    "753.c7138f6c.chunk.js.map": "/foodapp/static/js/753.c7138f6c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d88b22e.css",
+    "static/js/main.a96cecea.js"
+  ]
+}
